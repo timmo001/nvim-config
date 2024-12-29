@@ -2,10 +2,10 @@ return {
   {
     enabled = false,
     "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
+    -- branch = "canary",
     dependencies = {
-      { "github/copilot.vim" },            -- or github/copilot.vim
-      { "nvim-lua/plenary.nvim" },         -- for curl, log wrapper
+      { "github/copilot.vim" }, -- or github/copilot.vim
+      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
       { "nvim-telescope/telescope.nvim" }, -- Use telescope for help actions
     },
     opts = {
@@ -14,7 +14,7 @@ return {
       window = {
         layout = "float",
       },
-      auto_follow_cursor = false,    -- Don't follow the cursor after getting response
+      auto_follow_cursor = false, -- Don't follow the cursor after getting response
     },
     config = function(_, opts)
       local chat = require("CopilotChat")
@@ -23,16 +23,16 @@ return {
       opts.selection = select.unnamed
 
       -- Override the git prompts message
-      opts.prompts.Commit = {
-        prompt = "Write commit message for the change with commitizen convention",
-        selection = select.gitdiff,
-      }
-      opts.prompts.CommitStaged = {
-        prompt = "Write commit message for the change with commitizen convention",
-        selection = function(source)
-          return select.gitdiff(source, true)
-        end,
-      }
+      -- opts.prompts.Commit = {
+      -- prompt = "Write commit message for the change with commitizen convention",
+      -- selection = select.gitdiff,
+      -- }
+      -- opts.prompts.CommitStaged = {
+      -- prompt = "Write commit message for the change with commitizen convention",
+      -- selection = function(source)
+      -- return select.gitdiff(source, true)
+      -- end,
+      -- }
 
       chat.setup(opts)
 
@@ -80,10 +80,10 @@ return {
         desc = "CopilotChat - Prompt actions",
       },
       -- Code related commands
-      { "<leader>cce", "<cmd>CopilotChatExplain<cr>",       desc = "CopilotChat - Explain code" },
-      { "<leader>cct", "<cmd>CopilotChatTests<cr>",         desc = "CopilotChat - Generate tests" },
-      { "<leader>ccr", "<cmd>CopilotChatReview<cr>",        desc = "CopilotChat - Review code" },
-      { "<leader>ccR", "<cmd>CopilotChatRefactor<cr>",      desc = "CopilotChat - Refactor code" },
+      { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
+      { "<leader>cct", "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
+      { "<leader>ccr", "<cmd>CopilotChatReview<cr>", desc = "CopilotChat - Review code" },
+      { "<leader>ccR", "<cmd>CopilotChatRefactor<cr>", desc = "CopilotChat - Refactor code" },
       { "<leader>ccn", "<cmd>CopilotChatBetterNamings<cr>", desc = "CopilotChat - Better Naming" },
       -- Chat with Copilot in visual mode
       {
@@ -132,13 +132,13 @@ return {
         desc = "CopilotChat - Quick chat",
       },
       -- Debug
-      { "<leader>ccd", "<cmd>CopilotChatDebugInfo<cr>",     desc = "CopilotChat - Debug Info" },
+      { "<leader>ccd", "<cmd>CopilotChatDebugInfo<cr>", desc = "CopilotChat - Debug Info" },
       -- Fix the issue with diagnostic
       { "<leader>ccf", "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix Diagnostic" },
       -- Clear buffer and chat history
-      { "<leader>ccl", "<cmd>CopilotChatReset<cr>",         desc = "CopilotChat - Clear buffer and chat history" },
+      { "<leader>ccl", "<cmd>CopilotChatReset<cr>", desc = "CopilotChat - Clear buffer and chat history" },
       -- Toggle Copilot Chat Vsplit
-      { "<leader>ccv", "<cmd>CopilotChatToggle<cr>",        desc = "CopilotChat - Toggle Vsplit" },
+      { "<leader>ccv", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - Toggle Vsplit" },
     },
   },
 }
