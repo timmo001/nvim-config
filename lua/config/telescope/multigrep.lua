@@ -53,7 +53,7 @@ local live_multigrep = function(opts)
 end
 
 M.setup = function()
-  vim.keymap.set("n", "<leader>fg", live_multigrep)
+  vim.keymap.set("n", "<leader>sm", live_multigrep, { desc = "Multigrep (X  *glob*.txt)" })
 end
 
 return M

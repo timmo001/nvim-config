@@ -5,6 +5,6 @@
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>", { desc = "Reload config" })
 
 -- Format
-vim.keymap.set("n", "<space>ff", function()
-  require("conform").format({ async = true })
-end)
+-- vim.keymap.set("n", "<space>ff", function()
+--   require("conform").format({ async = true })
+-- end)
