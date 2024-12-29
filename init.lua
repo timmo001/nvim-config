@@ -6,7 +6,14 @@ require("config.lazy")
 vim.opt.shiftwidth = 2
 vim.opt.number = true
 -- vim.opt.relativenumber = true
--- vim.opt.clipboard = "unamedplus" -- Defaults to clipboard for 'p'
+
+-- Sync clipboard between OS and Neovim.
+--  Schedule the setting after `UiEnter` because it can increase startup-time.
+--  Remove this option if you want your OS clipboard to remain independent.
+--  See `:help 'clipboard'`
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
 
 -- Set keymap bindings
 require("config.keymap")
