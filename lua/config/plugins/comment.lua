@@ -1,6 +1,11 @@
 return {
-  "numToStr/Comment.nvim",
-  opts = {
-    -- add any options here
+  {
+    "tpope/vim-commentary",
+    -- "numToStr/Comment.nvim",
+    -- enabled = false,
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
   },
 }
