@@ -1,6 +1,6 @@
 return {
   {
-    enabled = true,
+    enabled = false,
     "yetone/avante.nvim",
     event = "VeryLazy",
     lazy = false,
@@ -48,12 +48,12 @@ return {
   },
   -- Copilot
   {
-    enabled = false,
+    enabled = true,
     "github/copilot.vim",
   },
   -- Copilot Chat
   {
-    enabled = false,
+    enabled = true,
     "CopilotC-Nvim/CopilotChat.nvim",
     -- branch = "canary",
     dependencies = {
