@@ -2,9 +2,12 @@ return {
   {
     "folke/tokyonight.nvim",
     enabled = true,
-    -- config = function()
-    -- vim.cmd.colorscheme("tokyonight-night")
-    -- end,
+    config = function()
+      require("tokyonight").setup({
+        transparent = true, -- Enables transparency
+      })
+      -- vim.cmd.colorscheme("tokyonight-night")
+    end,
   },
   {
     "rose-pine/neovim",
