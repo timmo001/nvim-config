@@ -15,3 +15,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Prime did this first: https://github.com/ThePrimeagen/init.lua/blob/d92308a63554db8bf8d75de5d41403cc2ddd692a/lua/theprimeagen/remap.lua#L32C1-L32C38
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Quick delete bindings
+vim.keymap.set("n", '<leader>d"', '"_d/"<CR>', { desc = "Delete to next quote" })
